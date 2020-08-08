@@ -1,6 +1,12 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  useHistory,
+} from "react-router-dom";
 
 import PrivateRoute from "./components/PrivateRoute";
 import Friends from "./components/Friends";
@@ -12,6 +18,9 @@ function App() {
     window.location.reload();
   };
 
+  let history = useHistory();
+  const friendsPage = () => history.push("/friends");
+
   return (
     <Router>
       <div className="App">
@@ -20,7 +29,9 @@ function App() {
             {localStorage.getItem("authToken") ? (
               <div onClick={() => logout()}>Log Out</div>
             ) : (
-              <Link to="/login">Log In</Link>
+              <Link to="/friends" onClick={friendsPage}>
+                Log In
+              </Link>
             )}
           </li>
           <li>
@@ -28,8 +39,8 @@ function App() {
           </li>
         </ul>
         <Switch>
-          <PrivateRoute exact path="/friends" component={Friends} />
           <Route path="/login" component={Login} />
+          <PrivateRoute exact path="/friends" component={Friends} />
           {/* <Route component={Login} /> */}
         </Switch>
       </div>

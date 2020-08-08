@@ -18,7 +18,6 @@ const Login = () => {
       .post("/login", credentials)
       .then((res) => {
         localStorage.setItem("authToken", res.data.payload);
-        window.location.reload();
         history.push("/friends");
       })
       .catch((err) => console.error("Something went wrong: ", err.message));
