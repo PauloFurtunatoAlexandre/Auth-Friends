@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
+import "./Friends.scss";
+
 import FriendList from "./FriendList";
 
 const Friends = () => {
@@ -15,7 +17,7 @@ const Friends = () => {
 
       .catch((err) => console.error("could not fetch from API: ", err.message));
   }, []);
-  console.log(friends);
+  console.log("added friends to render", friends);
 
   return (
     <div className="friends-list">

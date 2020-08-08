@@ -10,7 +10,7 @@ const Login = () => {
     password: "",
   });
 
-  const history = useHistory();
+  let history = useHistory();
 
   const onLogin = (e) => {
     e.preventDefault();
