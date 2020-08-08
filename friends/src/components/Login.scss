@@ -1,0 +1,38 @@
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  border: 2px solid #372652;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+input {
+  border: none;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-bottom: 2px solid #372652;
+  height: 40px;
+  margin-bottom: 20px;
+  background-color: #eee;
+  padding: 0 10px;
+
+  &:active, &:focus {
+    border-bottom: 4px solid #372652;
+  }
+}
+
+button {
+  background: #372652;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+/* Custom CSS */
+
+ul {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 36px;
+  padding: 12px;
+  border-bottom: 2px solid #372652;
+}
+
+li {
+  list-style: none;
+  margin-right: 6px;
+  color: #372652;
+}
+
+a {
+  text-decoration: none;
+  padding: 6px;
+  color: #372652;
+}
